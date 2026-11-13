@@ -24,7 +24,7 @@ heat_download =
 heat_code = https://github.com/kotovskivan/HeatSoundtrack
 
 # --- языки: первый — главный (корень сайта), остальные — /en/ /de/ ... ; x-default — для всех прочих стран ---
-languages = uk; en; de; es; fr; it; pl; pt; tr; ru; zh; ja; ko
+languages = uk; en; de; es; fr; it; pl; pt; tr; ru; zh; ja; ko; fi
 x_default = en
 
 # --- Google Search Console: код из мета-тега подтверждения (только content="..."), пусто — не вставляется ---

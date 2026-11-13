@@ -3,7 +3,7 @@
 Your own songs in **Need for Speed** (PC) — free, open-source tools that add your music as new tracks next to the game's soundtrack.
 Fan-made by **Kitivski + Claude** (Claude — AI by Anthropic). Not affiliated with Electronic Arts.
 
-**Website:** https://kotovskivan.github.io/NFSOwnMusic/ (13 languages)
+**Website:** https://kotovskivan.github.io/NFSOwnMusic/ (14 languages)
 
 | Game | Tool | Status |
 |---|---|---|
