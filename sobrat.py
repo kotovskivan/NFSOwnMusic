@@ -180,6 +180,8 @@ def main():
                     btns.append((cfg[f"{k}_code"], T["b_code"], ""))
                 if cfg.get(f"{k}_nfsmods"):   # 13.11: страница мода на nfsmods.xyz, подпись — имя сайта, не переводится
                     btns.append((cfg[f"{k}_nfsmods"], "NFSMods", ""))
+                if cfg.get(f"{k}_nexus"):     # 13.11: страница на Nexus Mods, подпись тоже не переводится
+                    btns.append((cfg[f"{k}_nexus"], "Nexus Mods", ""))
                 prog = (f'<p class="prog">{esc(cfg[k + "_name"])}' + (f" <small>{esc(ver)}</small>" if ver else "") + "</p>"
                         + '<p class="btns">' + "".join(
                             f'<a class="btn {c}" href="{esc(u)}" target="_blank" rel="noopener">{lbl}</a>' for u, lbl, c in btns)

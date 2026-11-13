@@ -7,7 +7,7 @@ Fan-made by **Kitivski + Claude** (Claude — AI by Anthropic). Not affiliated w
 
 | Game | Tool | Status |
 |---|---|---|
-| Need for Speed Unbound (2022) | [Unbound Soundtrack](https://github.com/kotovskivan/UnboundSoundtrack) · [website](https://kotovskivan.github.io/UnboundSoundtrack/) · [NFSMods](https://nfsmods.xyz/mod/8161) | available |
+| Need for Speed Unbound (2022) | [Unbound Soundtrack](https://github.com/kotovskivan/UnboundSoundtrack) · [website](https://kotovskivan.github.io/UnboundSoundtrack/) · [NFSMods](https://nfsmods.xyz/mod/8161) · [Nexus Mods](https://www.nexusmods.com/needforspeedunbound/mods/671) | available |
 | Need for Speed Heat (2019) | [Heat Soundtrack](https://github.com/kotovskivan/HeatSoundtrack) · [website](https://kotovskivan.github.io/HeatSoundtrack/) | coming soon |
 | the rest of the series | — | waiting |
 

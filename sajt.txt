@@ -8,13 +8,14 @@ kitivski = https://steamcommunity.com/id/kitivski/
 
 # --- программы. Ключ программы (unbound, heat) пишется в igry.txt 4-м полем.
 #     <ключ>_site — сайт программы: у него те же языки, что тут, поэтому ссылка ведет сразу на страницу того же языка.
-#     <ключ>_download — пусто = кнопки «Скачать» нет.  <ключ>_nfsmods — страница на nfsmods.xyz (пусто = кнопки нет). ---
+#     <ключ>_download — пусто = кнопки «Скачать» нет.  <ключ>_nfsmods / _nexus — страница на nfsmods.xyz / Nexus (пусто = кнопки нет). ---
 unbound_name = Unbound Soundtrack
 unbound_version = 1.0.1
 unbound_site = https://kotovskivan.github.io/UnboundSoundtrack/
 unbound_download = https://drive.google.com/drive/folders/1xj2YBqJ-sqB53Azt__dZNrsfP8iMbS_a?usp=sharing
 unbound_code = https://github.com/kotovskivan/UnboundSoundtrack
 unbound_nfsmods = https://nfsmods.xyz/mod/8161
+unbound_nexus = https://www.nexusmods.com/needforspeedunbound/mods/671
 
 heat_name = Heat Soundtrack
 heat_version =
