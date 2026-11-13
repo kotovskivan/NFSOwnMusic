@@ -1,0 +1,29 @@
+# ОБЩЕЕ ДЛЯ ВСЕХ ЯЗЫКОВ. Формат: ключ = значение. Строки с # — комментарии.
+# Поменял тут — запусти prosmotr.cmd (посмотреть) или opublikovat.cmd (на GitHub).
+
+# --- адрес сайта (SEO: canonical, hreflang, sitemap) и репо ---
+base_url = https://kotovskivan.github.io/NFSOwnMusic/
+github = https://github.com/kotovskivan/NFSOwnMusic
+kitivski = https://steamcommunity.com/id/kitivski/
+
+# --- программы. Ключ программы (unbound, heat) пишется в igry.txt 4-м полем.
+#     <ключ>_site — сайт программы: у него те же языки, что тут, поэтому ссылка ведет сразу на страницу того же языка.
+#     <ключ>_download — пусто = кнопки «Скачать» нет. ---
+unbound_name = Unbound Soundtrack
+unbound_version = 1.0.1
+unbound_site = https://kotovskivan.github.io/UnboundSoundtrack/
+unbound_download = https://drive.google.com/drive/folders/1xj2YBqJ-sqB53Azt__dZNrsfP8iMbS_a?usp=sharing
+unbound_code = https://github.com/kotovskivan/UnboundSoundtrack
+
+heat_name = Heat Soundtrack
+heat_version =
+heat_site = https://kotovskivan.github.io/HeatSoundtrack/
+heat_download =
+heat_code = https://github.com/kotovskivan/HeatSoundtrack
+
+# --- языки: первый — главный (корень сайта), остальные — /en/ /de/ ... ; x-default — для всех прочих стран ---
+languages = uk; en; de; es; fr; it; pl; pt; tr; ru; zh; ja; ko
+x_default = en
+
+# --- Google Search Console: код из мета-тега подтверждения (только content="..."), пусто — не вставляется ---
+google_verify =
