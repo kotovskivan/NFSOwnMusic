@@ -16,6 +16,7 @@
 import datetime
 import html
 import json
+import random
 import re
 import shutil
 import subprocess
@@ -83,7 +84,11 @@ def split_name(name):
     """«Need for Speed: Carbon» -> («Need for Speed», «Carbon»); «Shift 2: Unleashed» -> («», «Shift 2: Unleashed»)."""
     for pre in ("Need for Speed: ", "Need for Speed "):
         if name.startswith(pre):
-            return "Need for Speed", name[len(pre):]
+            rest = name[len(pre):]
+            m = re.match(r"(II|III)(?::\s*(.*))?$", rest)   # 15.11: «II» и «III: Hot Pursuit» отдельно не читаются
+            if m:
+                return ("Need for Speed " + m.group(1), m.group(2)) if m.group(2) else ("", name)
+            return "Need for Speed", rest
     return "", name
 
 
@@ -160,16 +165,14 @@ def main():
         def href_to(X):
             return (rel + path_of(X)) or "./"
 
-        # --- карточки игр ---
-        cards = []
+        # --- 15.11 дизайн: программы (ready/soon) — большие карточки с фото игры и лого программы;
+        #     вся серия — треклист (строки). Фото карточки: static/img/<ключ>.jpg (1200×600), нет файла — карточка без фото.
+        #     Лого = имя программы: последнее слово («Soundtrack») — подпись в стиле игры (.p-<ключ> в shablon.html).
+        feat, rows = [], []
         for g in games:
             small, big = split_name(g["name"])
-            st = g["st"]
-            badge = (f'<span class="b {st}">' + ('<i aria-hidden="true">?</i>' if st == "wait" else "")
-                     + f'{T["st_" + st]}</span>')
-            prog = ""
-            if g["prog"]:
-                k = g["prog"]
+            st, k = g["st"], g["prog"]
+            if k:
                 ver = cfg.get(f"{k}_version", "")
                 btns = []
                 if cfg.get(f"{k}_site"):
@@ -182,14 +185,33 @@ def main():
                     btns.append((cfg[f"{k}_nfsmods"], "NFSMods", ""))
                 if cfg.get(f"{k}_nexus"):     # 13.11: страница на Nexus Mods, подпись тоже не переводится
                     btns.append((cfg[f"{k}_nexus"], "Nexus Mods", ""))
-                prog = (f'<p class="prog">{esc(cfg[k + "_name"])}' + (f" <small>{esc(ver)}</small>" if ver else "") + "</p>"
-                        + '<p class="btns">' + "".join(
-                            f'<a class="btn {c}" href="{esc(u)}" target="_blank" rel="noopener">{lbl}</a>' for u, lbl, c in btns)
-                        + "</p>")
-            cards.append(
-                f'<article class="card {st}"><p class="yr">{g["year"]}</p>'
-                f'<h3>' + (f'<small>{esc(small)}</small>' if small else "") + f'{esc(big)}</h3>'
-                f'{badge}{prog}</article>')
+                pname = cfg[k + "_name"]
+                word, _, sig = pname.rpartition(" ")
+                logo = (f'<b>{esc(word)}</b> <span class="sig">{esc(sig)}</span>' if word else f"<b>{esc(pname)}</b>")
+                img = ""
+                if (ROOT / "static" / "img" / f"{k}.jpg").exists():
+                    img = f'<img src="{rel}img/{k}.jpg" alt="{esc(g["name"])}" width="1200" height="600">'
+                feat.append(
+                    f'<article class="fc {st} p-{esc(k)}" id="{esc(k)}">'
+                    f'<div class="fc-img">{img}<h3 class="fc-logo">{logo}</h3></div>'
+                    f'<div class="fc-body"><p class="fc-meta"><span class="b {st}">{T["st_" + st]}</span>'
+                    + (f'<span class="ver">v{esc(ver)}</span>' if ver else "")
+                    + f'<span class="gm">{g["year"]} · {esc(g["name"])}</span></p>'
+                    + '<p class="btns">' + "".join(
+                        f'<a class="btn {c}" href="{esc(u)}" target="_blank" rel="noopener">{lbl}</a>' for u, lbl, c in btns)
+                    + "</p></div></article>")
+            if st == "wait":
+                stat = (f'<span class="q" title="{esc(plain(T["st_wait"]))} — {esc(plain(T["l_wait"]))}">'
+                        f'<i aria-hidden="true">?</i><span class="vh">{T["st_wait"]}</span></span>')
+            else:
+                stat = f'<span class="b {st}">{T["st_" + st]}</span>'
+            inner = (f'<span class="y">{g["year"]}</span><span class="n">'
+                     + (f'<small>{esc(small)}</small>' if small else "") + f'{esc(big)}</span>{stat}')
+            rows.append(f'<li class="t {st}">' + (f'<a class="r" href="#{esc(k)}">{inner}</a>' if k else f'<div class="r">{inner}</div>')
+                        + "</li>")
+        rnd = random.Random(7)   # эквалайзер первого экрана: одинаковый на всех языках и при каждой сборке
+        eq = "".join(f'<i style="--h:{rnd.uniform(.28, 1):.2f};--d:{rnd.uniform(.55, 1.4):.2f}s;--l:-{rnd.uniform(0, 1.4):.2f}s"></i>'
+                     for _ in range(34))
 
         # --- SEO в <head> ---
         head = [
@@ -209,11 +231,18 @@ def main():
         ]
         head += [f'<meta property="og:locale:alternate" content="{esc(plain(get_text(X, "og_locale")))}">'
                  for X in langs if X != L]
+        og_img = (ROOT / "static" / "og.jpg").exists()   # 15.11: картинка превью ссылки 1200×630 (исходник — ../dizajn/og.html)
+        if og_img:
+            head += [f'<meta property="og:image" content="{esc(base)}og.jpg">',
+                     '<meta property="og:image:width" content="1200">', '<meta property="og:image:height" content="630">',
+                     '<meta property="og:image:alt" content="NFS Own Music">']
         head += [
-            '<meta name="twitter:card" content="summary">',
+            f'<meta name="twitter:card" content="{"summary_large_image" if og_img else "summary"}">',
             f'<meta name="twitter:title" content="{esc(title)}">',
             f'<meta name="twitter:description" content="{esc(desc)}">',
         ]
+        if og_img:
+            head.append(f'<meta name="twitter:image" content="{esc(base)}og.jpg">')
         if cfg.get("google_verify"):
             head.append(f'<meta name="google-site-verification" content="{esc(cfg["google_verify"])}">')
         apps = []
@@ -258,7 +287,8 @@ def main():
 
         special = {
             "lang": HTML_LANG.get(L, L), "code": L, "cls": "cjk" if L in CJK else "", "rel": rel, "home": href_to(L),
-            "head": "\n".join(head), "langs": langs_nav, "cur_label": cur_label, "games": "\n".join(cards),
+            "head": "\n".join(head), "langs": langs_nav, "cur_label": cur_label,
+            "featured": "\n".join(feat), "games": "\n".join(rows), "eq": eq,
             "count": f"{n_ready} / {len(games)}",
             "pages_json": json.dumps(pages, ensure_ascii=False).replace("</", "<\\/"),
         }
