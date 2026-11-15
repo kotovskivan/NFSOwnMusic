@@ -185,6 +185,8 @@ def main():
                     btns.append((cfg[f"{k}_nfsmods"], "NFSMods", ""))
                 if cfg.get(f"{k}_nexus"):     # 13.11: страница на Nexus Mods, подпись тоже не переводится
                     btns.append((cfg[f"{k}_nexus"], "Nexus Mods", ""))
+                if cfg.get(f"{k}_nfsaddons"): # 15.11: страница на nfsaddons.com (Ваня: «да»), подпись не переводится
+                    btns.append((cfg[f"{k}_nfsaddons"], "NFSAddons", ""))
                 pname = cfg[k + "_name"]
                 word, _, sig = pname.rpartition(" ")
                 logo = (f'<b>{esc(word)}</b> <span class="sig">{esc(sig)}</span>' if word else f"<b>{esc(pname)}</b>")
