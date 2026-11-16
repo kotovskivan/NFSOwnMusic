@@ -12,7 +12,7 @@ kitivski = https://steamcommunity.com/id/kitivski/
 unbound_name = Unbound Soundtrack
 unbound_version = 1.0.4
 unbound_site = https://kotovskivan.github.io/UnboundSoundtrack/
-unbound_download = https://drive.google.com/drive/folders/1xj2YBqJ-sqB53Azt__dZNrsfP8iMbS_a?usp=sharing
+unbound_download = https://github.com/kotovskivan/UnboundSoundtrack/releases/latest/download/UnboundSoundtrack.zip
 unbound_code = https://github.com/kotovskivan/UnboundSoundtrack
 unbound_nfsmods = https://nfsmods.xyz/mod/8161
 unbound_nexus = https://www.nexusmods.com/needforspeedunbound/mods/671
