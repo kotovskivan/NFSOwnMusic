@@ -10,7 +10,7 @@ kitivski = https://steamcommunity.com/id/kitivski/
 #     <ключ>_site — сайт программы: у него те же языки, что тут, поэтому ссылка ведет сразу на страницу того же языка.
 #     <ключ>_download — пусто = кнопки «Скачать» нет.  <ключ>_nfsmods / _nexus / _nfsaddons — страница на nfsmods.xyz / Nexus (пусто = кнопки нет). ---
 unbound_name = Unbound Soundtrack
-unbound_version = 1.0.3
+unbound_version = 1.0.4
 unbound_site = https://kotovskivan.github.io/UnboundSoundtrack/
 unbound_download = https://drive.google.com/drive/folders/1xj2YBqJ-sqB53Azt__dZNrsfP8iMbS_a?usp=sharing
 unbound_code = https://github.com/kotovskivan/UnboundSoundtrack
