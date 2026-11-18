@@ -17,6 +17,17 @@ unbound_code = https://github.com/kotovskivan/UnboundSoundtrack
 unbound_nfsmods = https://nfsmods.xyz/mod/8161
 unbound_nexus = https://www.nexusmods.com/needforspeedunbound/mods/671
 unbound_nfsaddons = https://www.nfsaddons.com/downloads/unbound/tools/11657/unbound-soundtrack-add-your-own-music.html
+# 18.11 (Ваня: «ссылки на гайды… только под нужные языки»): кнопка Steam — гайд на языке страницы; нет своего (it ja ko fi) — EN
+unbound_guide = https://steamcommunity.com/sharedfiles/filedetails/?id=3837419990
+unbound_guide_uk = https://steamcommunity.com/sharedfiles/filedetails/?id=3841804347
+unbound_guide_ru = https://steamcommunity.com/sharedfiles/filedetails/?id=3841851776
+unbound_guide_zh = https://steamcommunity.com/sharedfiles/filedetails/?id=3841854387
+unbound_guide_es = https://steamcommunity.com/sharedfiles/filedetails/?id=3841854899
+unbound_guide_pt = https://steamcommunity.com/sharedfiles/filedetails/?id=3841855181
+unbound_guide_de = https://steamcommunity.com/sharedfiles/filedetails/?id=3841853739
+unbound_guide_pl = https://steamcommunity.com/sharedfiles/filedetails/?id=3841854611
+unbound_guide_tr = https://steamcommunity.com/sharedfiles/filedetails/?id=3841854027
+unbound_guide_fr = https://steamcommunity.com/sharedfiles/filedetails/?id=3841855515
 
 heat_name = Heat Soundtrack
 heat_version =
