@@ -187,6 +187,12 @@ h1 span{color:var(--accent)}
   -webkit-text-stroke:.09em #000;paint-order:stroke fill;text-shadow:.05em .05em 0 #000,.1em .1em 0 #f4f4f0}
 .p-heat .fc-logo .sig{font:400 clamp(38px,4.8vw,56px)/1 "Mr Dafoe",cursive;color:#ff0080;margin-left:-2px;
   text-shadow:0 0 2px #ffcced,0 0 10px #ff0080,0 0 22px rgba(255,0,128,.6)}
+/* 21.11: Hot Pursuit — «мигалка»: косая плашка красный | синий, как на сайте программы */
+.p-hp .fc-logo b{color:#ff3d55;font-size:clamp(28px,3.3vw,42px)}
+.p-hp .fc-logo .sig{position:relative;isolation:isolate;margin-left:12px;padding:.18em .6em .14em;font:italic 700 clamp(12px,1.35vw,16px)/1 var(--cond);
+  color:#fff;letter-spacing:.28em;text-transform:uppercase;transform:translateY(-.35em)}
+.p-hp .fc-logo .sig::before{content:"";position:absolute;inset:0;z-index:-1;transform:skewX(-16deg);
+  background:linear-gradient(90deg,#e8102e 0 49.5%,#fff 49.5% 50.5%,#1f6fff 50.5% 100%);box-shadow:-8px 0 22px -6px rgba(232,16,46,.7),8px 0 22px -6px rgba(31,111,255,.75)}
 .fc-body{display:flex;flex-direction:column;gap:16px;flex:1;padding:16px 24px 22px}
 .fc-meta{margin:0;display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:var(--muted);font-size:14px}
 .ver{font:600 13px/1 Consolas,ui-monospace,monospace;color:var(--text);border:1px solid var(--line);padding:4px 7px}
@@ -263,6 +269,7 @@ footer p{margin:0 0 6px}
   <div class="feat">
 <article class="fc ready p-unbound" id="unbound"><div class="fc-img"><img src="../img/unbound.jpg" alt="Need for Speed Unbound" width="1200" height="600"><h3 class="fc-logo"><b>Unbound</b> <span class="sig">Soundtrack</span></h3></div><div class="fc-body"><p class="fc-meta"><span class="b ready">公開中</span><span class="ver">v1.0.5</span><span class="gm">2022 · Need for Speed Unbound</span></p><p class="btns"><a class="btn main" href="https://kotovskivan.github.io/UnboundSoundtrack/ja/" target="_blank" rel="noopener">サイト</a><a class="btn " href="https://github.com/kotovskivan/UnboundSoundtrack/releases/latest/download/UnboundSoundtrack.zip" target="_blank" rel="noopener">ダウンロード</a><a class="btn " href="https://github.com/kotovskivan/UnboundSoundtrack" target="_blank" rel="noopener">コード</a><a class="btn " href="https://nfsmods.xyz/mod/8161" target="_blank" rel="noopener">NFSMods</a><a class="btn " href="https://www.nexusmods.com/needforspeedunbound/mods/671" target="_blank" rel="noopener">Nexus Mods</a><a class="btn " href="https://www.nfsaddons.com/downloads/unbound/tools/11657/unbound-soundtrack-add-your-own-music.html" target="_blank" rel="noopener">NFSAddons</a><a class="btn " href="https://steamcommunity.com/sharedfiles/filedetails/?id=3837419990" target="_blank" rel="noopener">Steam</a></p></div></article>
 <article class="fc ready p-heat" id="heat"><div class="fc-img"><img src="../img/heat.jpg" alt="Need for Speed Heat" width="1200" height="600"><h3 class="fc-logo"><b>Heat</b> <span class="sig">Soundtrack</span></h3></div><div class="fc-body"><p class="fc-meta"><span class="b ready">公開中</span><span class="ver">v1.0</span><span class="gm">2019 · Need for Speed Heat</span></p><p class="btns"><a class="btn main" href="https://kotovskivan.github.io/HeatSoundtrack/ja/" target="_blank" rel="noopener">サイト</a><a class="btn " href="https://github.com/kotovskivan/HeatSoundtrack/releases/latest/download/HeatSoundtrack.zip" target="_blank" rel="noopener">ダウンロード</a><a class="btn " href="https://github.com/kotovskivan/HeatSoundtrack" target="_blank" rel="noopener">コード</a><a class="btn " href="https://www.nexusmods.com/needforspeedheat/mods/821" target="_blank" rel="noopener">Nexus Mods</a></p></div></article>
+<article class="fc soon p-hp" id="hp"><div class="fc-img"><img src="../img/hp.jpg" alt="Need for Speed: Hot Pursuit Remastered" width="1200" height="600"><h3 class="fc-logo"><b>Hot Pursuit</b> <span class="sig">Soundtrack</span></h3></div><div class="fc-body"><p class="fc-meta"><span class="b soon">近日公開</span><span class="gm">2010 · Need for Speed: Hot Pursuit / 2020 · Need for Speed: Hot Pursuit Remastered</span></p><p class="btns"><a class="btn main" href="https://kotovskivan.github.io/HotPursuitSoundtrack/ja/" target="_blank" rel="noopener">サイト</a></p></div></article>
   </div>
 </div></section>
 
@@ -275,7 +282,7 @@ footer p{margin:0 0 6px}
   </ul>
   <ol class="tl">
 <li class="t ready"><a class="r" href="#unbound"><span class="y">2022</span><span class="n"><small>Need for Speed</small>Unbound</span><span class="b ready">公開中</span></a></li>
-<li class="t wait"><div class="r"><span class="y">2020</span><span class="n"><small>Need for Speed</small>Hot Pursuit Remastered</span><span class="q" title="順番待ち — まだ未着手"><i aria-hidden="true">?</i><span class="vh">順番待ち</span></span></div></li>
+<li class="t soon"><a class="r" href="#hp"><span class="y">2020</span><span class="n"><small>Need for Speed</small>Hot Pursuit Remastered</span><span class="b soon">近日公開</span></a></li>
 <li class="t ready"><a class="r" href="#heat"><span class="y">2019</span><span class="n"><small>Need for Speed</small>Heat</span><span class="b ready">公開中</span></a></li>
 <li class="t wait"><div class="r"><span class="y">2017</span><span class="n"><small>Need for Speed</small>Payback</span><span class="q" title="順番待ち — まだ未着手"><i aria-hidden="true">?</i><span class="vh">順番待ち</span></span></div></li>
 <li class="t wait"><div class="r"><span class="y">2015</span><span class="n">Need for Speed</span><span class="q" title="順番待ち — まだ未着手"><i aria-hidden="true">?</i><span class="vh">順番待ち</span></span></div></li>
@@ -284,7 +291,7 @@ footer p{margin:0 0 6px}
 <li class="t wait"><div class="r"><span class="y">2011</span><span class="n"><small>Need for Speed</small>The Run</span><span class="q" title="順番待ち — まだ未着手"><i aria-hidden="true">?</i><span class="vh">順番待ち</span></span></div></li>
 <li class="t wait"><div class="r"><span class="y">2011</span><span class="n">Shift 2: Unleashed</span><span class="q" title="順番待ち — まだ未着手"><i aria-hidden="true">?</i><span class="vh">順番待ち</span></span></div></li>
 <li class="t wait"><div class="r"><span class="y">2010</span><span class="n"><small>Need for Speed</small>World</span><span class="q" title="順番待ち — まだ未着手"><i aria-hidden="true">?</i><span class="vh">順番待ち</span></span></div></li>
-<li class="t wait"><div class="r"><span class="y">2010</span><span class="n"><small>Need for Speed</small>Hot Pursuit</span><span class="q" title="順番待ち — まだ未着手"><i aria-hidden="true">?</i><span class="vh">順番待ち</span></span></div></li>
+<li class="t soon"><a class="r" href="#hp"><span class="y">2010</span><span class="n"><small>Need for Speed</small>Hot Pursuit</span><span class="b soon">近日公開</span></a></li>
 <li class="t wait"><div class="r"><span class="y">2009</span><span class="n"><small>Need for Speed</small>Shift</span><span class="q" title="順番待ち — まだ未着手"><i aria-hidden="true">?</i><span class="vh">順番待ち</span></span></div></li>
 <li class="t wait"><div class="r"><span class="y">2008</span><span class="n"><small>Need for Speed</small>Undercover</span><span class="q" title="順番待ち — まだ未着手"><i aria-hidden="true">?</i><span class="vh">順番待ち</span></span></div></li>
 <li class="t wait"><div class="r"><span class="y">2007</span><span class="n"><small>Need for Speed</small>ProStreet</span><span class="q" title="順番待ち — まだ未着手"><i aria-hidden="true">?</i><span class="vh">順番待ち</span></span></div></li>
