@@ -34,6 +34,7 @@ heat_version = 1.0
 heat_site = https://kotovskivan.github.io/HeatSoundtrack/
 heat_download = https://github.com/kotovskivan/HeatSoundtrack/releases/latest/download/HeatSoundtrack.zip
 heat_code = https://github.com/kotovskivan/HeatSoundtrack
+heat_nexus = https://www.nexusmods.com/needforspeedheat/mods/821
 
 # --- языки: первый — главный (корень сайта), остальные — /en/ /de/ ... ; x-default — для всех прочих стран ---
 languages = uk; en; de; es; fr; it; pl; pt; tr; ru; zh; ja; ko; fi
