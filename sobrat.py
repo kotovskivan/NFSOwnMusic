@@ -169,10 +169,15 @@ def main():
         #     вся серия — треклист (строки). Фото карточки: static/img/<ключ>.jpg (1200×600), нет файла — карточка без фото.
         #     Лого = имя программы: последнее слово («Soundtrack») — подпись в стиле игры (.p-<ключ> в shablon.html).
         feat, rows = [], []
+        # 21.11: одна программа на несколько игр (hp = Hot Pursuit 2010 + Remastered) — одна карточка, в ней все игры;
+        #        карточки: сначала «Готово», потом «Скоро» (порядок внутри — как в igry.txt)
+        done = set()
         for g in games:
             small, big = split_name(g["name"])
             st, k = g["st"], g["prog"]
-            if k:
+            if k and k not in done:
+                done.add(k)
+                mine = sorted((x for x in games if x["prog"] == k), key=lambda x: x["year"])
                 ver = cfg.get(f"{k}_version", "")
                 btns = []
                 if cfg.get(f"{k}_site"):
@@ -195,15 +200,16 @@ def main():
                 img = ""
                 if (ROOT / "static" / "img" / f"{k}.jpg").exists():
                     img = f'<img src="{rel}img/{k}.jpg" alt="{esc(g["name"])}" width="1200" height="600">'
-                feat.append(
+                gm = " / ".join(f'{x["year"]} · {esc(x["name"])}' for x in mine)
+                feat.append((0 if st == "ready" else 1,
                     f'<article class="fc {st} p-{esc(k)}" id="{esc(k)}">'
                     f'<div class="fc-img">{img}<h3 class="fc-logo">{logo}</h3></div>'
                     f'<div class="fc-body"><p class="fc-meta"><span class="b {st}">{T["st_" + st]}</span>'
                     + (f'<span class="ver">v{esc(ver)}</span>' if ver else "")
-                    + f'<span class="gm">{g["year"]} · {esc(g["name"])}</span></p>'
+                    + f'<span class="gm">{gm}</span></p>'
                     + '<p class="btns">' + "".join(
                         f'<a class="btn {c}" href="{esc(u)}" target="_blank" rel="noopener">{lbl}</a>' for u, lbl, c in btns)
-                    + "</p></div></article>")
+                    + "</p></div></article>"))
             if st == "wait":
                 stat = (f'<span class="q" title="{esc(plain(T["st_wait"]))} — {esc(plain(T["l_wait"]))}">'
                         f'<i aria-hidden="true">?</i><span class="vh">{T["st_wait"]}</span></span>')
@@ -249,11 +255,12 @@ def main():
             head.append(f'<meta name="twitter:image" content="{esc(base)}og.jpg">')
         if cfg.get("google_verify"):
             head.append(f'<meta name="google-site-verification" content="{esc(cfg["google_verify"])}">')
-        apps = []
+        apps, seen_apps = [], set()
         for g in games:
-            if g["st"] != "ready":
+            if g["st"] != "ready" or g["prog"] in seen_apps:   # 21.11: программа на две игры (hp) — одна запись
                 continue
             k = g["prog"]
+            seen_apps.add(k)
             app = {"@type": "SoftwareApplication", "name": cfg[k + "_name"],
                    "applicationCategory": "GameApplication", "operatingSystem": "Windows 10, Windows 11",
                    "url": cfg[k + "_site"].rstrip("/") + "/" + path_of(L),
@@ -292,7 +299,7 @@ def main():
         special = {
             "lang": HTML_LANG.get(L, L), "code": L, "cls": "cjk" if L in CJK else "", "rel": rel, "home": href_to(L),
             "head": "\n".join(head), "langs": langs_nav, "cur_label": cur_label,
-            "featured": "\n".join(feat), "games": "\n".join(rows), "eq": eq,
+            "featured": "\n".join(h for _, h in sorted(feat, key=lambda f: f[0])), "games": "\n".join(rows), "eq": eq,
             "count": f"{n_ready} / {len(games)}",
             "pages_json": json.dumps(pages, ensure_ascii=False).replace("</", "<\\/"),
         }

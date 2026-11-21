@@ -1,13 +1,14 @@
 # ВСЯ СЕРИЯ NFS НА PC. Одна строка — одна игра, на сайте идут в этом же порядке.
 # год | название | статус | программа
 #   статус: ready — готово (кнопки Сайт / Скачать / Код), soon — скоро, wait — «?», ждет очереди
-#   программа: ключ из sajt.txt (unbound, heat) — только для ready и soon
+#   программа: ключ из sajt.txt (unbound, heat, hp) — только для ready и soon;
+#   один ключ на две игры (hp: 2010 + Remastered, 21.11) — на сайте одна карточка, обе строки ведут на нее
 # Название пишется полностью: «Need for Speed» сайт сам ставит мелкой строкой сверху.
 # Не берем: Motor City Online и NFS Edge (онлайн, закрыты), мобильные и консольные (Nitro, No Limits).
 # Годы 1994-1999 — по памяти Claude (не сверено), остальные — knowledge/nfs-seriya-muzyka.md.
 
 2022 | Need for Speed Unbound | ready | unbound
-2020 | Need for Speed: Hot Pursuit Remastered | wait
+2020 | Need for Speed: Hot Pursuit Remastered | soon | hp
 2019 | Need for Speed Heat | ready | heat
 2017 | Need for Speed Payback | wait
 2015 | Need for Speed | wait
@@ -16,7 +17,7 @@
 2011 | Need for Speed: The Run | wait
 2011 | Shift 2: Unleashed | wait
 2010 | Need for Speed: World | wait
-2010 | Need for Speed: Hot Pursuit | wait
+2010 | Need for Speed: Hot Pursuit | soon | hp
 2009 | Need for Speed: Shift | wait
 2008 | Need for Speed: Undercover | wait
 2007 | Need for Speed: ProStreet | wait

@@ -36,6 +36,11 @@ heat_download = https://github.com/kotovskivan/HeatSoundtrack/releases/latest/do
 heat_code = https://github.com/kotovskivan/HeatSoundtrack
 heat_nexus = https://www.nexusmods.com/needforspeedheat/mods/821
 
+# 21.11 (Ваня: «для RE и 2010 будет одна страница»): одна программа на Hot Pursuit 2010 + Remastered — «Скоро».
+#   При выпуске: igry.txt обе строки soon -> ready, тут hp_version / hp_download / hp_code (+ nexus и т.д.)
+hp_name = Hot Pursuit Soundtrack
+hp_site = https://kotovskivan.github.io/HotPursuitSoundtrack/
+
 # --- языки: первый — главный (корень сайта), остальные — /en/ /de/ ... ; x-default — для всех прочих стран ---
 languages = uk; en; de; es; fr; it; pl; pt; tr; ru; zh; ja; ko; fi
 x_default = en
