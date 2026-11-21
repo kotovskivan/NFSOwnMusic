@@ -170,7 +170,7 @@ def main():
         #     Лого = имя программы: последнее слово («Soundtrack») — подпись в стиле игры (.p-<ключ> в shablon.html).
         feat, rows = [], []
         # 21.11: одна программа на несколько игр (hp = Hot Pursuit 2010 + Remastered) — одна карточка, в ней все игры;
-        #        карточки: сначала «Готово», потом «Скоро» (порядок внутри — как в igry.txt)
+        #        карточки — в порядке igry.txt (по годам: Unbound, Hot Pursuit, Heat — Ваня 21.11 «местами Hot Pursuit и Heat поменять»)
         done = set()
         for g in games:
             small, big = split_name(g["name"])
@@ -299,7 +299,7 @@ def main():
         special = {
             "lang": HTML_LANG.get(L, L), "code": L, "cls": "cjk" if L in CJK else "", "rel": rel, "home": href_to(L),
             "head": "\n".join(head), "langs": langs_nav, "cur_label": cur_label,
-            "featured": "\n".join(h for _, h in sorted(feat, key=lambda f: f[0])), "games": "\n".join(rows), "eq": eq,
+            "featured": "\n".join(h for _, h in feat), "games": "\n".join(rows), "eq": eq,
             "count": f"{n_ready} / {len(games)}",
             "pages_json": json.dumps(pages, ensure_ascii=False).replace("</", "<\\/"),
         }
