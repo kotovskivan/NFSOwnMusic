@@ -1,6 +1,6 @@
 # Suomi. Muoto: avain = teksti. **lihavointi**, [teksti](linkin avain sajt.txt:stä tai osoite). Avaimet samat kaikissa kielissä.
 seo_title = NFS Own Music — oma musiikki Need for Speediin (PC-modit)
-seo_desc = Ilmaiset avoimen lähdekoodin työkalut, joilla lisäät omat biisisi Need for Speediin uusina kappaleina pelin soundtrackin rinnalle. Nyt saatavilla NFS Unboundiin, NFS Heat tulossa pian.
+seo_desc = Ilmaiset avoimen lähdekoodin työkalut, joilla lisäät omat biisisi Need for Speediin uusina kappaleina pelin soundtrackin rinnalle. Nyt saatavilla NFS Unboundiin ja NFS Heatiin.
 og_locale = fi_FI
 lang_name = Suomi
 suggest = Tämä sivu on myös suomeksi
@@ -8,7 +8,7 @@ ai_note = Käännökset tehty tekoälyllä (Claude)
 lang_nav = Kieli
 kicker = Fanien tekemä · Kitivski + Claude
 lead = Omat biisisi **Need for Speedissä** — uusina kappaleina, suoraan pelin oman musiikin rinnalla.
-sub = Ilmaiset, avoimen lähdekoodin työkalut. Aloitimme Unboundista; seuraavaksi Heat, sitten muu sarja.
+sub = Ilmaiset, avoimen lähdekoodin työkalut. Aloitimme Unboundista, nyt Heat — seuraavaksi muu sarja.
 series_h = Koko sarja
 series_sub = Jokainen PC-peli vuodesta 1994.
 st_ready = Saatavilla

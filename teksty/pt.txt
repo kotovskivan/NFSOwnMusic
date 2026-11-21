@@ -1,6 +1,6 @@
 # Формат: ключ = текст. **жирный**, [текст](ключ-ссылки из sajt.txt или адрес). Ключи одинаковые во всех языках.
 seo_title = NFS Own Music — suas músicas no Need for Speed (mods para PC)
-seo_desc = Ferramentas grátis e de código aberto: adicione suas músicas ao Need for Speed como faixas novas ao lado da trilha sonora. Já para NFS Unbound; NFS Heat em breve.
+seo_desc = Ferramentas grátis e de código aberto: adicione suas músicas ao Need for Speed como faixas novas ao lado da trilha sonora. Já para NFS Unbound e NFS Heat.
 og_locale = pt_BR
 lang_name = Português
 suggest = Esta página também está em português
@@ -8,7 +8,7 @@ ai_note = Traduções feitas com IA (Claude)
 lang_nav = Idioma
 kicker = Projeto de fã · Kitivski + Claude
 lead = Suas próprias músicas no **Need for Speed** — como faixas novas, ao lado da música do jogo.
-sub = Ferramentas grátis e de código aberto. Começamos pelo Unbound; depois vem o Heat e a série inteira.
+sub = Ferramentas grátis e de código aberto. Começamos pelo Unbound, agora o Heat — depois a série inteira.
 series_h = A série inteira
 series_sub = Todos os jogos de PC desde 1994.
 st_ready = Disponível

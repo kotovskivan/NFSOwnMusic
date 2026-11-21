@@ -1,6 +1,6 @@
 # Формат: ключ = текст. **жирный**, [текст](ключ-ссылки из sajt.txt или адрес). Ключи одинаковые во всех языках.
 seo_title = NFS Own Music — Need for Speed'e kendi müziğin (PC modları)
-seo_desc = Ücretsiz, açık kaynak araçlar: kendi şarkılarını Need for Speed'e oyunun müziklerinin yanına yeni parça olarak ekle. NFS Unbound için çıktı, NFS Heat yakında.
+seo_desc = Ücretsiz, açık kaynak araçlar: kendi şarkılarını Need for Speed'e oyunun müziklerinin yanına yeni parça olarak ekle. NFS Unbound ve NFS Heat için çıktı.
 og_locale = tr_TR
 lang_name = Türkçe
 suggest = Bu sayfa Türkçe olarak da var
@@ -8,7 +8,7 @@ ai_note = Çeviriler yapay zekâ ile yapıldı (Claude)
 lang_nav = Dil
 kicker = Hayran projesi · Kitivski + Claude
 lead = **Need for Speed**'de kendi şarkıların — oyunun müziklerinin yanında, yeni parçalar olarak.
-sub = Ücretsiz, açık kaynak araçlar. Unbound ile başladık; sırada Heat ve serinin tamamı var.
+sub = Ücretsiz, açık kaynak araçlar. Unbound ile başladık, şimdi Heat — sırada serinin tamamı var.
 series_h = Tüm seri
 series_sub = 1994'ten bu yana tüm PC oyunları.
 st_ready = Çıktı

@@ -30,9 +30,9 @@ unbound_guide_tr = https://steamcommunity.com/sharedfiles/filedetails/?id=384185
 unbound_guide_fr = https://steamcommunity.com/sharedfiles/filedetails/?id=3841855515
 
 heat_name = Heat Soundtrack
-heat_version =
+heat_version = 1.0
 heat_site = https://kotovskivan.github.io/HeatSoundtrack/
-heat_download =
+heat_download = https://github.com/kotovskivan/HeatSoundtrack/releases/latest/download/HeatSoundtrack.zip
 heat_code = https://github.com/kotovskivan/HeatSoundtrack
 
 # --- языки: первый — главный (корень сайта), остальные — /en/ /de/ ... ; x-default — для всех прочих стран ---

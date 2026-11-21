@@ -1,6 +1,6 @@
 # Формат: ключ = текст. **жирный**, [текст](ключ-ссылки из sajt.txt или адрес). Ключи одинаковые во всех языках.
 seo_title = NFS Own Music — Need for Speed에 나만의 음악을 (PC 모드)
-seo_desc = 무료 오픈소스 도구: 내 노래를 Need for Speed에 새 트랙으로 추가해 게임 사운드트랙과 함께 들을 수 있습니다. NFS Unbound용 공개, NFS Heat용 곧 출시.
+seo_desc = 무료 오픈소스 도구: 내 노래를 Need for Speed에 새 트랙으로 추가해 게임 사운드트랙과 함께 들을 수 있습니다. NFS Unbound용과 NFS Heat용 공개.
 og_locale = ko_KR
 lang_name = 한국어
 suggest = 이 페이지는 한국어로도 볼 수 있습니다
@@ -8,7 +8,7 @@ ai_note = 번역은 AI(Claude)가 했습니다
 lang_nav = 언어
 kicker = 팬 프로젝트 · Kitivski + Claude
 lead = **Need for Speed**에 나만의 노래를 — 게임 음악 옆에 새 트랙으로.
-sub = 무료 오픈소스 도구. Unbound로 시작했고, 다음은 Heat, 그다음은 시리즈 전체입니다.
+sub = 무료 오픈소스 도구. Unbound로 시작했고 지금은 Heat — 다음은 시리즈 전체입니다.
 series_h = 시리즈 전체
 series_sub = 1994년부터 나온 모든 PC 작품.
 st_ready = 사용 가능
